@@ -1,5 +1,5 @@
 <template>
-	<form v-on:submit.prevent="onSubmit" class="container checkout" ref="form">
+	<form v-on:submit.prevent="onSubmit" class="container" ref="form">
 		<h1 class="title">Checkout</h1>
 		<div class="field">
 			<label for="first-name" class="label">First name</label>
@@ -41,7 +41,7 @@ export default {
 	},
 	methods: {
 		onSubmit(e) {
-			recurly.token(this.$refs['form'], (err, token) => {
+			recurly.token(this.$refs.form, (err, token) => {
 				if (err) {
 					throw err;
 				}
@@ -54,10 +54,13 @@ export default {
 </script>
 
 <style>
-.checkout {
-	margin-top: 30px;
+.container {
+	padding: 30px;
 }
 .recurly-hosted-field-card {
 	height: 40px;
+}
+.button {
+	margin-top: 15px;
 }
 </style>

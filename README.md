@@ -1,24 +1,3 @@
-# rjs-vue
+An example app using vue with recurly.js elements.
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+To demo, clone and run npm install in the project root directory. Create an .env.development.local file in the project root directory and set `VUE_APP_RECURLY_KEY=<YOUR_API_KEY>`, then run `npm run serve`.
